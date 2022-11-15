@@ -1,0 +1,77 @@
+.form__labelText {
+    max-width: 200px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.form__field {
+    padding: 10px;
+    width: 60%;
+    border: solid rgb(228, 169, 39) 2px;
+}
+
+.form__fieldset {
+    border: solid hsl(34, 86%, 40%);
+}
+
+.form__legend {
+    padding: 12px;
+}
+
+.form__field:hover {
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border: solid hsl(34, 86%, 40%) 2px;
+    background-color: rgb(224, 240, 250);
+}
+
+.form__select {
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border: solid hsl(34, 86%, 40%) 2px;
+}
+
+.form__select:hover {
+    padding: 10px;
+    width: 60%;
+    border-radius: 10px;
+    border: solid rgb(49, 75, 190) 2px;
+    background-color: rgb(224, 240, 250);
+}
+
+.form__field--readonly {
+    padding: 10px;
+    width: 60%;
+    background-color: rgb(236, 225, 195);
+    text-align: center;
+    border-radius: 10px;
+    border: solid hsl(34, 86%, 40%) 2px;
+}
+
+.form__button {
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    width: 80%;
+    background-color: hsl(34, 86%, 40%);
+    font-weight: 800;
+    color: rgba(22, 22, 29, 0.767);
+    transition: 1s;
+}
+
+.form__button:hover {
+    background-color: hsl(34, 86%, 50%);
+    color: rgba(22, 22, 29, 0.767);
+    transform: scale(1.1);
+
+}
+
+.form__button:active {
+    background-color: hsl(0, 0%, 100%);
+    color: rgba(22, 22, 29, 0.767);
+
+}
