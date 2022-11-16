@@ -29,4 +29,4 @@ export const currency = [
         rate: 0.0115,
         id: 5,
     },
-    ];
+];

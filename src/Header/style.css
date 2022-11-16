@@ -1,7 +1,8 @@
-.header{
+.header {
     font-size: 20px;
-    }
-    .header__title{
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
+}
+
+.header__title {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
