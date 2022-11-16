@@ -23,4 +23,10 @@ export const currency = [
         rate: 4.9533,
         id: 4,
     },
+    {
+        name: "HUF: Węgry",
+        short: "HUF",
+        rate: 0.0115,
+        id: 5,
+    },
     ];
