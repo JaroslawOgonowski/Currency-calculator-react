@@ -6,12 +6,10 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
     };
-
     const [startSum, setStartSum] = useState("");
     const [yourCurrency, setYourCurrency] = useState("PLN");
     const [exchangedCurrency, setExchangedCurrency] = useState("EUR");
     const [result, setResult] = useState("");
-
     const calculateResult = () => {
         if (yourCurrency === exchangedCurrency) { setResult(startSum + " " + exchangedCurrency) }
         else {
@@ -21,7 +19,6 @@ const Form = () => {
             setResult(count.toFixed(2) + " " + exchangedCurrency)
         }
     };
-
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
@@ -70,7 +67,6 @@ const Form = () => {
                                     {exchangedCurrency.name}
                                 </option>
                             ))}
-
                         </select>
                     </label>
                 </p>
