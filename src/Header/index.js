@@ -1,6 +1,7 @@
+import "./style.css"
 const Header = () => (
-    <header className="body__header">
-        <h1>Kalkulator walut</h1>
+    <header className="header">
+        <h1 className="header__title">Kalkulator walut</h1>
     </header>
 );
 export default Header;
