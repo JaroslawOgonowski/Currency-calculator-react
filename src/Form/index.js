@@ -15,10 +15,11 @@ const Form = () => {
         else {
             const rateYourCurrency = currency.find(({ short }) => short === yourCurrency).rate;
             const rateExchangedCurrency = currency.find(({ short }) => short === exchangedCurrency).rate;
-            const count = ((startSum * rateYourCurrency) / rateExchangedCurrency)
-            setResult(count.toFixed(2) + " " + exchangedCurrency)
+            const count = ((+startSum * rateYourCurrency) / rateExchangedCurrency)
+            setResult(`${count.toFixed(2)} ${exchangedCurrency}`)
         }
     };
+
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
