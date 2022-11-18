@@ -60,11 +60,12 @@ const Form = () => {
                             value={exchangedCurrency}
                             onChange={({ target }) => setExchangedCurrency(target.value)}
                         >
-                            {currency.map(exchangedCurrency => (
+                            {currency.map(({ short, name }) => (
                                 <option
-                                    key={exchangedCurrency.short}
-                                    value={exchangedCurrency.short}>
-                                    {exchangedCurrency.name}
+                                    key={short}
+                                    value={short}
+                                >
+                                    {name}
                                 </option>
                             ))}
                         </select>
@@ -89,7 +90,9 @@ const Form = () => {
                     <button
                         className="form__button"
                         onClick={calculateResult}
-                    >Oblicz</button>
+                    >
+                        Oblicz
+                    </button>
                 </p>
             </fieldset>
         </form>

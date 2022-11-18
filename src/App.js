@@ -6,13 +6,11 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <body>
-      <Main>
-        <Header />
-        <Form />
-        <Footer />
-      </Main>
-    </body>
+    <Main>
+      <Header />
+      <Form />
+      <Footer />
+    </Main>
   );
 }
 
