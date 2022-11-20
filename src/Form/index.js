@@ -80,7 +80,7 @@ const Form = () => {
                         <span className="form__labelText">Otrzymana kwota:</span></label>
                     <input
                         className="form__field--readonly"
-                        readonly
+                        readOnly
                         name="receivedAmount"
                         placeholder="wprowadź dane"
                         disabled
