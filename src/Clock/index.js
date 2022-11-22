@@ -5,7 +5,7 @@ const Clock = () => {
 
   return (
     <div className="clock__container">
-      <div class="clock">
+      <div className="clock">
         Aktualny czas: {actualDate.toLocaleString("pl-PL", {
           weekday: "long",
           day: "numeric",
@@ -19,6 +19,5 @@ const Clock = () => {
     </div>
   )
 };
-
 
 export default Clock;
