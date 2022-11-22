@@ -1,0 +1,11 @@
+.clock {
+    background-color: rgba(12, 11, 11, 0.678);
+    color: white;
+    font-size: 14px;
+}
+
+.clock__container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}

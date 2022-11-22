@@ -3,13 +3,16 @@ import Form from "./Form";
 import Main from "./Main";
 import Header from "./Header";
 import Footer from "./Footer";
+import Clock from './Clock';
 
 function App() {
   return (
+
     <Main>
+     <Clock/>
       <Header />
       <Form />
-      <Footer />
+      <Footer /> 
     </Main>
   );
 }
