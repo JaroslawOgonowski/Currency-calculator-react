@@ -1,4 +1,4 @@
-import useCurrentDate from "./useDate";
+import useCurrentDate from "./useCurrentDate";
 import "./style.css"
 const Clock = () => {
   const actualDate = useCurrentDate();
