@@ -1,5 +1,6 @@
 import useCurrentDate from "./useCurrentDate";
-import "./style.css"
+import { ClockDiv } from "./styled";
+
 const Clock = () => {
   const actualDate = useCurrentDate();
 
@@ -16,9 +17,9 @@ const Clock = () => {
   );
 
   return (
-    <div className="clock">
+    <ClockDiv>
       Aktualny czas: {displayDate(actualDate)}
-    </div>
+    </ClockDiv>
   )
 };
 
