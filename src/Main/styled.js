@@ -1,4 +1,6 @@
-.main {
+import styled, { css } from "styled-components";
+
+export const MainContent = styled.main`
     max-width: 800px;
     margin: auto;
     text-align: center;
@@ -6,4 +8,4 @@
     font-size: 18px;
     color: rgba(221, 220, 231, 0.767);
     background-color: rgba(28, 28, 24, 0.801);
-}
+`;

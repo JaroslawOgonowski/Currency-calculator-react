@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./style.css"
+import { FormFieldset, FormLegend, FormLabel, FormInput, FormSecect, FormButton } from "./styled";
 import { currency } from "../Arrays/currency";
 
 const Form = () => {
@@ -21,12 +21,12 @@ const Form = () => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Twoje środki:</legend>
-                <label><span className="form__labelText" >Kwota:</span>
-                    <input
-                        className="form__field"
+        <form onSubmit={onFormSubmit}>
+        <FormFieldset>
+                <FormLegend>Twoje środki:</FormLegend>
+                <label>
+                    <FormLabel>Kwota:</FormLabel>
+                    <FormInput
                         required type="number"
                         min="0.01"
                         step="0.01"
@@ -37,9 +37,8 @@ const Form = () => {
                 </label>
                 <p>
                     <label>
-                        <span className="form__labelText">W jakiej walucie:</span>
-                        <select
-                            className="form__select"
+                        <FormLabel>W jakiej walucie:</FormLabel>
+                        <FormSecect
                             value={yourCurrency}
                             onChange={({ target }) => setYourCurrency(target.value)}
                         >
@@ -50,14 +49,13 @@ const Form = () => {
                                 >
                                     {yourCurrency.name}
                                 </option>))}
-                        </select>
+                        </FormSecect>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">Wybierz walutę którą chcesz otrzymać:</span>
-                        <select
-                            className="form__select"
+                        <FormLabel>Wybierz walutę którą chcesz otrzymać:</FormLabel>
+                        <FormSecect
                             value={exchangedCurrency}
                             onChange={({ target }) => setExchangedCurrency(target.value)}
                         >
@@ -69,17 +67,16 @@ const Form = () => {
                                     {name}
                                 </option>
                             ))}
-                        </select>
+                        </FormSecect>
                     </label>
                 </p>
-            </fieldset>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Środki po wymianie:</legend>
+            </FormFieldset>
+            <FormFieldset>
+                <FormLegend>Środki po wymianie:</FormLegend>
                 <p>
                     <label >
-                        <span className="form__labelText">Otrzymana kwota:</span></label>
-                    <input
-                        className="form__field--readonly"
+                        <FormLabel>Otrzymana kwota:</FormLabel></label>
+                    <FormInput
                         readOnly
                         name="receivedAmount"
                         placeholder="wprowadź dane"
@@ -88,14 +85,13 @@ const Form = () => {
                     />
                 </p>
                 <p>
-                    <button
-                        className="form__button"
+                    <FormButton
                         onClick={calculateResult}
                     >
                         Oblicz
-                    </button>
+                    </FormButton>
                 </p>
-            </fieldset>
+            </FormFieldset>
         </form>
     )
 };
