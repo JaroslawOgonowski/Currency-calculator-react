@@ -1,4 +1,3 @@
-import './App.css';
 import Form from "./Form";
 import Main from "./Main";
 import Header from "./Header";

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const MainContent = styled.main`
     max-width: 800px;
@@ -6,6 +6,6 @@ export const MainContent = styled.main`
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    color: rgba(221, 220, 231, 0.767);
-    background-color: rgba(28, 28, 24, 0.801);
+    color: ${({theme})=> theme.color.mainFont};
+    background-color: ${({theme})=> theme.color.backgroundBlack};
 `;

@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 
 export const FormFieldset = styled.fieldset`
-border: solid hsl(34, 86%, 40%);
+border: solid ${({ theme }) => theme.color.pumpkinSkin};
 
-@media (max-width: 767px) {
+@media (max-width: ${({ theme }) => theme.breakPoint.square}px) {
         margin: 20px;    
     }
 `;
@@ -20,45 +20,33 @@ export const FormLabel = styled.span`
     text-align: center;
     padding-top: 15px;
 `;
+
 export const FormInput = styled.input`
     padding: 10px;
     width: 60%;
-    border: solid rgb(228, 169, 39) 2px;
+    border: solid ${({ theme }) => theme.color.goldenrod} 2px;
 
     &:hover{
         padding: 10px;
         width: 60%;
-        border: solid hsl(34, 86%, 40%) 2px;
-        background-color: rgb(224, 240, 250);
+        border: solid ${({ theme }) => theme.color.pumpkinSkin} 2px;
+        background-color: ${({ theme }) => theme.color.almond};
     }
 
     &&{
-    ${({readOnly}) => readOnly && css`
-    padding: 10px;
-    width: 60%;
-    background-color: rgb(236, 225, 195);
+    ${({ readOnly }) => readOnly && css`
+    background-color: ${({ theme }) => theme.color.almond};
     text-align: center;
-    border: solid hsl(34, 86%, 40%) 2px;
+    border: solid ${({ theme }) => theme.color.pumpkinSkin} 2px;
     cursor: not-allowed;
     `}}
-`;
-
-export const FormSecect = styled.select`
-    padding: 10px;
-    width: 60%;
-    border: solid hsl(34, 86%, 40%) 2px;
-
-    &:hover{
-        padding: 10px;
-        width: 60%;
-        border: solid rgb(49, 75, 190) 2px;
-        background-color: rgb(224, 240, 250);
-        cursor: pointer;
+    
+    
+    ${({ as }) => as && css`
+    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+        font-size: 14px;
     }
-
-    @media (max-width: 767px) {   
-        font-size: 12px;
-    }
+    `}
 `;
 
 export const FormButton = styled.button`
@@ -66,20 +54,20 @@ export const FormButton = styled.button`
     border: none;
     width: 80%;
     padding: 20px;
-    background-color: hsl(34, 86%, 40%);
+    background-color: ${({ theme }) => theme.color.pumpkinSkin};
     font-weight: 800;
-    color: rgba(22, 22, 29, 0.767);
+    color: ${({ theme }) => theme.color.blackGlass};
     transition: 1s;
 
-    &:hover {
-        background-color: hsl(34, 86%, 50%);
-        color: rgba(22, 22, 29, 0.767);
+    &:hover{
+        filter: contrast(140%);
+        color: ${({ theme }) => theme.color.blackGlass};
         transform: scale(1.05);
         cursor: pointer;
 }
 
-    &:active {
-        background-color: hsl(0, 0%, 100%);
-        color: rgba(22, 22, 29, 0.767);
+    &:active{
+        background-color:${({ theme }) => theme.color.white};
+        color: ${({ theme }) => theme.color.blackGlass};
 }
 `;

@@ -22,7 +22,7 @@ const Form = () => {
 
     return (
         <form onSubmit={onFormSubmit}>
-        <FormFieldset>
+            <FormFieldset>
                 <FormLegend>Twoje środki:</FormLegend>
                 <label>
                     <FormLabel>Kwota:</FormLabel>
@@ -38,7 +38,9 @@ const Form = () => {
                 <p>
                     <label>
                         <FormLabel>W jakiej walucie:</FormLabel>
-                        <FormSecect
+                        <FormInput
+                            pupa
+                            as="select"
                             value={yourCurrency}
                             onChange={({ target }) => setYourCurrency(target.value)}
                         >
@@ -49,13 +51,15 @@ const Form = () => {
                                 >
                                     {yourCurrency.name}
                                 </option>))}
-                        </FormSecect>
+                        </FormInput>
                     </label>
                 </p>
                 <p>
                     <label>
                         <FormLabel>Wybierz walutę którą chcesz otrzymać:</FormLabel>
-                        <FormSecect
+                        <FormInput
+                            pupa
+                            as="select"
                             value={exchangedCurrency}
                             onChange={({ target }) => setExchangedCurrency(target.value)}
                         >
@@ -67,7 +71,7 @@ const Form = () => {
                                     {name}
                                 </option>
                             ))}
-                        </FormSecect>
+                        </FormInput>
                     </label>
                 </p>
             </FormFieldset>
