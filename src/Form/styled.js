@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const FormFieldset = styled.fieldset`
+export const Fieldset = styled.fieldset`
 border: solid ${({ theme }) => theme.color.pumpkinSkin};
 
 @media (max-width: ${({ theme }) => theme.breakPoint.square}px) {
@@ -8,11 +8,11 @@ border: solid ${({ theme }) => theme.color.pumpkinSkin};
     }
 `;
 
-export const FormLegend = styled.legend`
+export const Legend = styled.legend`
 padding: 12px;
 `;
 
-export const FormLabel = styled.span`
+export const Label = styled.span`
     max-width: 200px;
     width: 100%;
     display: inline-block;
@@ -21,7 +21,7 @@ export const FormLabel = styled.span`
     padding-top: 15px;
 `;
 
-export const FormInput = styled.input`
+export const Input = styled.input`
     padding: 10px;
     width: 60%;
     border: solid ${({ theme }) => theme.color.goldenrod} 2px;
@@ -43,13 +43,14 @@ export const FormInput = styled.input`
     
     
     ${({ as }) => as && css`
+    cursor: pointer;
     @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
         font-size: 14px;
     }
     `}
 `;
 
-export const FormButton = styled.button`
+export const Button = styled.button`
     font-family: 'Montserrat', sans-serif;
     border: none;
     width: 80%;

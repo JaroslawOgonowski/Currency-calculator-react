@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormFieldset, FormLegend, FormLabel, FormInput, FormSecect, FormButton } from "./styled";
+import { Fieldset, Legend, Label, Input, FormSecect, Button } from "./styled";
 import { currency } from "../Arrays/currency";
 
 const Form = () => {
@@ -22,11 +22,11 @@ const Form = () => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <FormFieldset>
-                <FormLegend>Twoje środki:</FormLegend>
+            <Fieldset>
+                <Legend>Twoje środki:</Legend>
                 <label>
-                    <FormLabel>Kwota:</FormLabel>
-                    <FormInput
+                    <Label>Kwota:</Label>
+                    <Input
                         required type="number"
                         min="0.01"
                         step="0.01"
@@ -37,9 +37,8 @@ const Form = () => {
                 </label>
                 <p>
                     <label>
-                        <FormLabel>W jakiej walucie:</FormLabel>
-                        <FormInput
-                            pupa
+                        <Label>W jakiej walucie:</Label>
+                        <Input
                             as="select"
                             value={yourCurrency}
                             onChange={({ target }) => setYourCurrency(target.value)}
@@ -51,14 +50,13 @@ const Form = () => {
                                 >
                                     {yourCurrency.name}
                                 </option>))}
-                        </FormInput>
+                        </Input>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <FormLabel>Wybierz walutę którą chcesz otrzymać:</FormLabel>
-                        <FormInput
-                            pupa
+                        <Label>Wybierz walutę którą chcesz otrzymać:</Label>
+                        <Input
                             as="select"
                             value={exchangedCurrency}
                             onChange={({ target }) => setExchangedCurrency(target.value)}
@@ -71,16 +69,16 @@ const Form = () => {
                                     {name}
                                 </option>
                             ))}
-                        </FormInput>
+                        </Input>
                     </label>
                 </p>
-            </FormFieldset>
-            <FormFieldset>
-                <FormLegend>Środki po wymianie:</FormLegend>
+            </Fieldset>
+            <Fieldset>
+                <Legend>Środki po wymianie:</Legend>
                 <p>
                     <label >
-                        <FormLabel>Otrzymana kwota:</FormLabel></label>
-                    <FormInput
+                        <Label>Otrzymana kwota:</Label></label>
+                    <Input
                         readOnly
                         name="receivedAmount"
                         placeholder="wprowadź dane"
@@ -89,13 +87,13 @@ const Form = () => {
                     />
                 </p>
                 <p>
-                    <FormButton
+                    <Button
                         onClick={calculateResult}
                     >
                         Oblicz
-                    </FormButton>
+                    </Button>
                 </p>
-            </FormFieldset>
+            </Fieldset>
         </form>
     )
 };
