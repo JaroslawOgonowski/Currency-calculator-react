@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export const FooterContent = styled.footer`
     font-size: 12px;

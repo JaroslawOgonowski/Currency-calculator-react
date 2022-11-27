@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Fieldset, Legend, Label, Input, FormSecect, Button } from "./styled";
+import { Fieldset, Legend, Label, Input, Button } from "./styled";
 import { currency } from "../Arrays/currency";
 
 const Form = () => {

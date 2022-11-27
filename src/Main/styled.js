@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainContent = styled.main`
+export const StyledMain = styled.main`
     max-width: 800px;
     margin: auto;
     text-align: center;
@@ -9,3 +9,10 @@ export const MainContent = styled.main`
     color: ${({theme})=> theme.color.mainFont};
     background-color: ${({theme})=> theme.color.backgroundBlack};
 `;
+
+const Main = ({ children }) => (
+    <StyledMain>
+        {children}
+    </StyledMain>
+);
+export default Main;

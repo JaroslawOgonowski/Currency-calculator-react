@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components";
 
 export const Fieldset = styled.fieldset`
-border: solid ${({ theme }) => theme.color.pumpkinSkin};
+    border: solid ${({ theme }) => theme.color.pumpkinSkin};
 
-@media (max-width: ${({ theme }) => theme.breakPoint.square}px) {
+    @media (max-width: ${({ theme }) => theme.breakPoint.square}px) {
         margin: 20px;    
     }
 `;
 
 export const Legend = styled.legend`
-padding: 12px;
+    padding: 12px;
 `;
 
 export const Label = styled.span`
@@ -35,17 +35,16 @@ export const Input = styled.input`
 
     &&{
     ${({ readOnly }) => readOnly && css`
-    background-color: ${({ theme }) => theme.color.almond};
-    text-align: center;
-    border: solid ${({ theme }) => theme.color.pumpkinSkin} 2px;
-    cursor: not-allowed;
+        background-color: ${({ theme }) => theme.color.backgroundBlack};
+        color: ${({ theme }) => theme.color.white} ;
+        text-align: center;
+        cursor: not-allowed;
     `}}
-    
-    
+        
     ${({ as }) => as && css`
-    cursor: pointer;
-    @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
-        font-size: 14px;
+        cursor: pointer;
+        @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
+            font-size: 14px;
     }
     `}
 `;
