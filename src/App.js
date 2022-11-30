@@ -1,5 +1,5 @@
 import Form from "./Form";
-import Main from "./Main/styled";
+import Main from "./Main";
 import Header from "./Header";
 import Footer from "./Footer";
 import Clock from './Clock';

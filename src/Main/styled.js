@@ -9,10 +9,3 @@ export const StyledMain = styled.main`
     color: ${({theme})=> theme.color.mainFont};
     background-color: ${({theme})=> theme.color.backgroundBlack};
 `;
-
-const Main = ({ children }) => (
-    <StyledMain>
-        {children}
-    </StyledMain>
-);
-export default Main;
