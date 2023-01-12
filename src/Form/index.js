@@ -1,23 +1,25 @@
-import { useState } from "react";
 import { Fieldset, Legend, Label, Input, Button } from "./styled";
-import { currency } from "../Arrays/currency";
+import useCurrency from "./useCurrency";
+import { useState } from "react";
 
 const Form = () => {
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-    };
     const [startSum, setStartSum] = useState("");
     const [yourCurrency, setYourCurrency] = useState("PLN");
     const [exchangedCurrency, setExchangedCurrency] = useState("EUR");
     const [result, setResult] = useState("");
+    const ratesData = useCurrency();
+    const { date, state, rates } = ratesData
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+    };
     const calculateResult = () => {
-        if (yourCurrency === exchangedCurrency) { setResult(startSum + " " + exchangedCurrency) }
-        else {
-            const rateYourCurrency = currency.find(({ short }) => short === yourCurrency).rate;
-            const rateExchangedCurrency = currency.find(({ short }) => short === exchangedCurrency).rate;
-            const count = ((+startSum * rateYourCurrency) / rateExchangedCurrency)
+        const rateYourCurrency = rates[yourCurrency];
+        const rateExchangedCurrency = rates[exchangedCurrency];
+        const count = ((startSum * rateYourCurrency) / rateExchangedCurrency)
+        if (yourCurrency !== "" && startSum !== "" && exchangedCurrency !== "") {
             setResult(`${count.toFixed(2)} ${exchangedCurrency}`)
-        }
+        };
     };
 
     return (
@@ -40,16 +42,18 @@ const Form = () => {
                         <Label>W jakiej walucie:</Label>
                         <Input
                             as="select"
+                            name="yourCurrent"
                             value={yourCurrency}
                             onChange={({ target }) => setYourCurrency(target.value)}
                         >
-                            {currency.map(yourCurrency => (
+                            {!!ratesData.rates && Object.keys(ratesData.rates).map((yourCurrency) => (
                                 <option
-                                    key={yourCurrency.short}
-                                    value={yourCurrency.short}
+                                    key={yourCurrency}
+                                    value={yourCurrency}
                                 >
-                                    {yourCurrency.name}
-                                </option>))}
+                                    {yourCurrency}
+                                </option>
+                            ))};
                         </Input>
                     </label>
                 </p>
@@ -58,17 +62,18 @@ const Form = () => {
                         <Label>Wybierz walutę którą chcesz otrzymać:</Label>
                         <Input
                             as="select"
+                            name="exchangedCurrent"
                             value={exchangedCurrency}
                             onChange={({ target }) => setExchangedCurrency(target.value)}
                         >
-                            {currency.map(({ short, name }) => (
+                            {!!ratesData.rates && Object.keys(ratesData.rates).map(((exchangedCurrency) => (
                                 <option
-                                    key={short}
-                                    value={short}
+                                    key={exchangedCurrency}
+                                    value={exchangedCurrency}
                                 >
-                                    {name}
+                                    {exchangedCurrency}
                                 </option>
-                            ))}
+                            )))}
                         </Input>
                     </label>
                 </p>
@@ -95,6 +100,6 @@ const Form = () => {
                 </p>
             </Fieldset>
         </form>
-    )
+    );
 };
 export default Form;

@@ -4,14 +4,13 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Clock from './Clock';
 
-function App() {
+function App() { 
   return (
-
     <Main>
-     <Clock/>
+      <Clock />
       <Header />
       <Form />
-      <Footer /> 
+      <Footer />
     </Main>
   );
 }
