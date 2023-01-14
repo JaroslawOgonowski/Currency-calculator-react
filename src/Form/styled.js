@@ -1,4 +1,27 @@
 import styled, { css } from "styled-components";
+export const Loading = styled.div`
+    border: solid ${({ theme }) => theme.color.pumpkinSkin};
+    padding: 30px;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    font-size: 20; 
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: ${({ theme }) => theme.color.white};
+    `
+    export const Error = styled.div`
+    border: solid ${({ theme }) => theme.color.alert};
+    background-color: ${({ theme }) => theme.color.blackGlass};
+    padding: 30px;
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    font-size: 20; 
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: ${({ theme }) => theme.color.almond};
+    `
 
 export const Fieldset = styled.fieldset`
     border: solid ${({ theme }) => theme.color.pumpkinSkin};
@@ -43,6 +66,7 @@ export const Input = styled.input`
         
     ${({ as }) => as && css`
         cursor: pointer;
+        margin-top: 20px;
         @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
             font-size: 14px;
     }

@@ -9,7 +9,8 @@ export const theme = {
         almond: "hsl(44, 52%, 85%)",
         activeYellow: "rgb(209, 194, 28)",
         mainFont: "hsla(245, 19%, 88%, 0.767)",
-        backgroundBlack: "hsla(60, 8%, 10%, 0.801)",     
+        backgroundBlack: "hsla(60, 8%, 10%, 0.801)",
+        alert: "hsla(0, 100%, 55%, 0.888)",     
     },
     breakPoint:{
         mobileMax:767,

@@ -2,10 +2,11 @@ import { createGlobalStyle } from "styled-components";
 import background from "./background.jpg"
 export const GlobalStyle = createGlobalStyle`
 html {
-  background-color: ${({theme})=> theme.color.backgroundBlack};
+  background-color: ${({theme})=> theme.color.black};
   background-image: url("${background}");
-  background-position: center;
-  background-size: cover;
+  background-position: 50% 70px;
+  background-size: auto;
+  background-repeat: no-repeat;
   box-sizing: border-box;
 }
 
