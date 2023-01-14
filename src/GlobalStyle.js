@@ -5,7 +5,7 @@ html {
   background-color: ${({theme})=> theme.color.black};
   background-image: url("${background}");
   background-position: 50% 70px;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }

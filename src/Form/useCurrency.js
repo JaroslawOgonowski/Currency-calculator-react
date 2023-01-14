@@ -24,7 +24,7 @@ export const useCurrency = () => {
             }
         };
 
-        setTimeout(getCurrency, 5000);
+        setTimeout(getCurrency, 3000);
     }, []);
 
     return ratesData;

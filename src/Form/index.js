@@ -1,6 +1,7 @@
 import { Fieldset, Legend, Label, Input, Button, Loading, Error } from "./styled";
 import useCurrency from "./useCurrency";
 import { useState } from "react";
+import loadinggif from "./loadingGif.gif"
 
 const Form = () => {
     const [startSum, setStartSum] = useState("");
@@ -28,6 +29,7 @@ const Form = () => {
                 <Loading>
                     Momencik...
                     <p>Trwa pobieranie kursów walut</p>
+                    <img src={loadinggif} alt="loading..." width="200px" />
                 </Loading>
             ) : state === "error" ? (
                 <Error>
@@ -68,8 +70,6 @@ const Form = () => {
                                     ))};
                                 </Input>
                             </label>
-
-
                             <label>
                                 <Label>Wybierz walutę którą chcesz otrzymać:</Label>
                                 <Input
@@ -92,9 +92,9 @@ const Form = () => {
                     </Fieldset>
                     <Fieldset>
                         <Legend>Środki po wymianie:</Legend>
-
                         <label >
-                            <Label>Otrzymana kwota:</Label></label>
+                            <Label>Otrzymana kwota:</Label>
+                        </label>
                         <Input
                             readOnly
                             name="receivedAmount"
