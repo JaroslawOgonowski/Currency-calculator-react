@@ -17,8 +17,7 @@ export const useCurrency = () => {
                     rates: response.data.rates,
                     date: response.data.date,
             });
-            } catch
-            {
+            } catch {
                 setRatesData({
                     state: "error",
                 }); 
