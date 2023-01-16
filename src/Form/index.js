@@ -17,7 +17,7 @@ const Form = () => {
     const calculateResult = () => {
         const rateYourCurrency = rates[yourCurrency];
         const rateExchangedCurrency = rates[exchangedCurrency];
-        const count = ((startSum * rateYourCurrency) / rateExchangedCurrency)
+        const count = ((startSum * rateExchangedCurrency) / rateYourCurrency)
         if (yourCurrency !== "" && startSum !== "" && exchangedCurrency !== "") {
             setResult(`${count.toFixed(2)} ${exchangedCurrency}`)
         };
