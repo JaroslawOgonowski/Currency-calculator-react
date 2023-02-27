@@ -42,7 +42,7 @@ export const useCurrency = () => {
                 });
             }
         };
-        setTimeout(getCurrency, 3000);
+        setTimeout(getCurrency, 1500);
     }, []);
     return ratesData;
 };
