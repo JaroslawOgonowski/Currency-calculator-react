@@ -8,9 +8,9 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
-}
+};
 
 *, ::after, ::before {
   box-sizing: inherit;
-}
-`
+};
+`;

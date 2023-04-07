@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+
 export const Loading = styled.div`
     border: solid ${({ theme }) => theme.color.pumpkinSkin};
     padding: 30px;
@@ -9,8 +10,8 @@ export const Loading = styled.div`
     margin-top: 100px;
     margin-bottom: 30px;
     color: ${({ theme }) => theme.color.white};
-    `
-    export const Error = styled.div`
+    `;
+export const Error = styled.div`
     border: solid ${({ theme }) => theme.color.alert};
     background-color: ${({ theme }) => theme.color.blackGlass};
     padding: 30px;
@@ -21,14 +22,14 @@ export const Loading = styled.div`
     margin-top: 100px;
     margin-bottom: 30px;
     color: ${({ theme }) => theme.color.almond};
-    `
+    `;
 
 export const Fieldset = styled.fieldset`
     border: solid ${({ theme }) => theme.color.pumpkinSkin};
 
     @media (max-width: ${({ theme }) => theme.breakPoint.square}px) {
         margin: 20px;    
-    }
+    };
 `;
 
 export const Legend = styled.legend`
@@ -54,7 +55,7 @@ export const Input = styled.input`
         width: 60%;
         border: solid ${({ theme }) => theme.color.pumpkinSkin} 2px;
         background-color: ${({ theme }) => theme.color.almond};
-    }
+    };
 
     &&{
     ${({ readOnly }) => readOnly && css`
@@ -62,11 +63,13 @@ export const Input = styled.input`
         color: ${({ theme }) => theme.color.white} ;
         text-align: center;
         cursor: not-allowed;
-    `}}
+    `};
+    };
         
     ${({ as }) => as && css`
         cursor: pointer;
         margin-top: 20px;
+        
         @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
             font-size: 14px;
     }
@@ -88,10 +91,10 @@ export const Button = styled.button`
         color: ${({ theme }) => theme.color.blackGlass};
         transform: scale(1.05);
         cursor: pointer;
-}
+    };
 
     &:active{
         background-color:${({ theme }) => theme.color.white};
         color: ${({ theme }) => theme.color.blackGlass};
-}
+    };
 `;
