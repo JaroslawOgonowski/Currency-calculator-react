@@ -11,6 +11,7 @@ export const Loading = styled.div`
     margin-bottom: 30px;
     color: ${({ theme }) => theme.color.white};
     `;
+    
 export const Error = styled.div`
     border: solid ${({ theme }) => theme.color.alert};
     background-color: ${({ theme }) => theme.color.blackGlass};
@@ -72,7 +73,7 @@ export const Input = styled.input`
         
         @media (max-width: ${({ theme }) => theme.breakPoint.mobileMax}px) {
             font-size: 14px;
-    }
+        };
     `}
 `;
 
