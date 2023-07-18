@@ -57,15 +57,6 @@ export const Input = styled.input`
         border: solid ${({ theme }) => theme.color.pumpkinSkin} 2px;
         background-color: ${({ theme }) => theme.color.almond};
     };
-
-    &&{
-    ${({ readOnly }) => readOnly && css`
-        background-color: ${({ theme }) => theme.color.backgroundBlack};
-        color: ${({ theme }) => theme.color.white} ;
-        text-align: center;
-        cursor: not-allowed;
-    `};
-    };
         
     ${({ as }) => as && css`
         cursor: pointer;
