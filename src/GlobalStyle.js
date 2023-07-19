@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import background from "./background.jpg"
 export const GlobalStyle = createGlobalStyle`
 html {
+  padding-top: 60px;
   height: 100vh;
   width: 100%;
   display: flex;
